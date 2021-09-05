@@ -4,22 +4,17 @@ import React, { useEffect } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 // import { apiActions } from "modules/api/actions";
 import useFetch from "hooks/useFetch";
+import Navigation from "components/common/Navigation";
 
 export default function Jobs() {
 const { response, performFetch } = useFetch(JOBS)
+const {loading, data} = response
     
 useEffect(() => {
     performFetch()
 }, [performFetch])
 
-console.log(response)
-
-    return (
-    <div>
-        Jobs Component     
-              
-    </div>
-    )
+    return <Navigation loading={loading} services={data} title={'react + redux + redux-saga'}/>
 } 
 
 // export default function Jobs() {
