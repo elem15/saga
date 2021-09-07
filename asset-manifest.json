@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/saga/static/js/main.6ea5bff7.chunk.js",
+    "main.js.map": "/saga/static/js/main.6ea5bff7.chunk.js.map",
+    "runtime-main.js": "/saga/static/js/runtime-main.a6698bcb.js",
+    "runtime-main.js.map": "/saga/static/js/runtime-main.a6698bcb.js.map",
+    "static/js/2.2b999327.chunk.js": "/saga/static/js/2.2b999327.chunk.js",
+    "static/js/2.2b999327.chunk.js.map": "/saga/static/js/2.2b999327.chunk.js.map",
+    "index.html": "/saga/index.html",
+    "static/js/2.2b999327.chunk.js.LICENSE.txt": "/saga/static/js/2.2b999327.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6698bcb.js",
+    "static/js/2.2b999327.chunk.js",
+    "static/js/main.6ea5bff7.chunk.js"
+  ]
+}
