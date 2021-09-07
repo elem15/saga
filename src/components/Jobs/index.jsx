@@ -14,7 +14,7 @@ useEffect(() => {
     performFetch()
 }, [performFetch])
 
-    return <Navigation loading={loading} services={data} title={'react + redux + redux-saga'}/>
+    return <Navigation loading={loading} services={data} title={'react + redux + redux-saga app'}/>
 } 
 
 // export default function Jobs() {

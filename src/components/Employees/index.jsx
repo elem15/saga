@@ -1,16 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { EMPLOYEES } from "modules/api/endpoints";
-import Navigation from "components/common/Navigation";
 import useFetch from "hooks/useFetch";
 import ProfileGrid from "components/common/ProfileGrid";
+import { useSelector } from "react-redux";
+import { selectAppState } from 'modules/app/selectors'
 
 export default function Employees() {
     const { response, performFetch } = useFetch(EMPLOYEES)
     const {loading, data} = response
+    const appState = useSelector(selectAppState)
     useEffect(() => {
         performFetch()
     }, [performFetch])       
     
-    return <ProfileGrid profiles={data} loading={loading} />
+    const prepareData = useMemo(() => {
+        if(!Array.isArray(data)) {
+            return []
+        }
+        if (!appState.selectedJob) {
+            return data
+        }
+        return data.filter((employee) => employee.job === appState.selectedJob)
+    },[data, appState.selectedJob])
+
+    return <ProfileGrid profiles={prepareData} loading={loading} />
     } 
     
